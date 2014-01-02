@@ -2,6 +2,10 @@ case platform
 when "debian","ubuntu"
   set['varnish']['dir']     = "/etc/varnish"
   set['varnish']['default'] = "/etc/default/varnish"
+when "oracle"
+  set['varnish']['dir']     = "/etc/varnish"
+  set['varnish']['default'] = "/etc/default/varnish" 
+  set['varnish']['version'] = "3.0.4"
 end
 
 default['varnish']['version'] = "2.1"
